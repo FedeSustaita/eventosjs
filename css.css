@@ -1,0 +1,19 @@
+body {
+  display: grid;
+  grid-template-columns: 70% auto;
+}
+
+main {
+  grid-column: 1;
+}
+
+aside {
+  grid-column: 2;
+  list-style: none;
+}
+aside #lista {
+  border: solid black;
+}
+aside #lista li {
+  margin: 5px;
+}/*# sourceMappingURL=css.css.map */

@@ -1,0 +1,19 @@
+body{
+    display: grid;
+    grid-template-columns: 70% auto;
+}
+main{
+    grid-column: 1;
+}
+aside{
+    grid-column: 2;
+    list-style: none;
+    #lista{
+        border: solid black;
+        li{
+            margin: 5px;
+        }
+    }
+
+
+}
