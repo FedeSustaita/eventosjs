@@ -2,8 +2,19 @@ body{
     display: grid;
     grid-template-columns: 70% auto;
 }
+header{
+    text-align: center;
+    grid-column: 1/ span 2;
+}
 main{
     grid-column: 1;
+    button{
+        border-radius: 7px;
+    }
+    button:hover{
+        background-color: black;
+        color: white;
+    }
 }
 aside{
     grid-column: 2;
@@ -14,6 +25,20 @@ aside{
             margin: 5px;
         }
     }
-
-
+}
+footer{
+    margin-top: 20px;  
+    text-align: center;
+    grid-column: 1/ span 2;
+    a{
+        color: black;
+            i{
+                font-size: 30px;
+                margin-left: 10px;
+            }
+            i:hover{
+                font-size: 35px;
+                color: rgb(37, 37, 107);
+            }
+    }
 }

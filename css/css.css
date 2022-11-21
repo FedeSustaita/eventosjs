@@ -3,8 +3,20 @@ body {
   grid-template-columns: 70% auto;
 }
 
+header {
+  text-align: center;
+  grid-column: 1/span 2;
+}
+
 main {
   grid-column: 1;
+}
+main button {
+  border-radius: 7px;
+}
+main button:hover {
+  background-color: black;
+  color: white;
 }
 
 aside {
@@ -16,4 +28,21 @@ aside #lista {
 }
 aside #lista li {
   margin: 5px;
+}
+
+footer {
+  margin-top: 20px;
+  text-align: center;
+  grid-column: 1/span 2;
+}
+footer a {
+  color: black;
+}
+footer a i {
+  font-size: 30px;
+  margin-left: 10px;
+}
+footer a i:hover {
+  font-size: 35px;
+  color: rgb(37, 37, 107);
 }/*# sourceMappingURL=css.css.map */
