@@ -12,16 +12,26 @@ class produ{
 
 function mostrarCarrito(producto){
     const carrito = document.getElementById('lista')
-  let li = document.createElement('li')
-  li.innerHTML += `${producto.nombre} ${producto.precio}`
-  carrito.appendChild(li)
+    let li = document.createElement('li')
+    li.innerHTML += `${producto.nombre} ${producto.precio}`
+    carrito.appendChild(li)
+    
+  localStorage.setItem('carrito', JSON.stringify(lista))
   }
 
 function recuperar() {
-    localStorage.setItem('carrito', JSON.stringify(lista))
-    let Crecuperado = JSON.parse(localStorage.getItem('carrito'))
-}
+   
+   let crecuperado = JSON.parse(localStorage.getItem('carrito')) || []
 
+   crecuperado.forEach(item=>{
+    lista.push(item)
+    mostrarCarrito(item)
+   })
+   
+
+
+}
+recuperar()
 const prod1 = new produ("Burger",10,1);
 const prod2 = new produ("Pizza",8,2);
 const prod3 = new produ("Pasta",15,3);
@@ -84,7 +94,7 @@ ensalada.onclick=()=>{
 
 const mostrar = document.getElementById("mostrar")
 mostrar.onclick=()=>{
-    recuperar()
+   
 
     lista.forEach((lis)=>{
         totalll=totalll + lis.precio
