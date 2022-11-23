@@ -16,12 +16,12 @@ function mostrarCarrito(producto){
     li.innerHTML += `${producto.nombre} ${producto.precio}`
     carrito.appendChild(li)
     
-  localStorage.setItem('carrito', JSON.stringify(lista))
+  sessionStorage.setItem('carrito', JSON.stringify(lista))
   }
 
 function recuperar() {
    
-   let crecuperado = JSON.parse(localStorage.getItem('carrito')) || []
+   let crecuperado = JSON.parse(sessionStorage.getItem('carrito')) || []
 
    crecuperado.forEach(item=>{
     lista.push(item)
